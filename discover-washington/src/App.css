@@ -1,0 +1,681 @@
+/****************************************** 
+These styles are for Login / Signup
+******************************************/
+
+.login-page {
+  background-image: url('./img/Login.jpeg');
+  min-height: 100vh;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo {
+  height: 13vh;
+  margin: 2%;
+}
+
+.d-logo {
+  display: block;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  flex-wrap: wrap;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  font-size: medium;
+}
+
+.create-account {
+  color: white;
+  text-align: center;
+  font-size: medium;
+  font-family: inherit;
+  padding: 5%;
+}
+
+.home-page{
+  position: relative;
+}
+
+/****************************************** 
+These styles are for Header
+******************************************/
+
+.header{
+  background-color: black;
+  display: grid;
+  grid-template-areas: "logo header header" "content content content" "footer footer footer";
+  grid-template-columns: auto 1fr;
+  grid-area: header;
+}
+
+.header ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+}
+
+.header .logo {
+  grid-area: logo;
+  height: auto;
+  width: 3rem;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: block;
+  padding: 0.5rem;
+  position: absolute;
+  right: 2px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.bar {
+  background-color: white;
+  display: block;
+  height: 4px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  width: 24px;
+}
+
+/****************************************** 
+These styles are for About Page/ Home
+******************************************/
+
+.homepage-main {
+  background-image: url('./img/Rainier.jpeg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.content { 
+  background-color: white;
+  border: 3px solid #2b63e233;
+  box-shadow: 0px 5px 10px 3px dimgrey;
+  display: inline-block;
+  font-family: cursive;
+  padding: 1rem;
+  opacity: 0.94;
+  font-weight: 600;
+  font-size: 100%;
+  margin: 1vh;
+}
+
+.home-header {
+  text-align: center;
+  color: navy;
+  padding: 1rem;
+  background: aliceblue;
+}
+
+/****************************************** 
+These styles are for Accordion 
+******************************************/
+
+.experience-main {
+  margin: 0;
+  padding: 0;
+  background-image: url('./img/Grey-Winter.jpeg');
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.accordion__body { 
+  display: none;
+  background-color: transparent;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+  color: white;
+}
+
+.accordion { 
+  border-bottom: none;
+  display: flex;
+  justify-content: center;
+}
+
+.accordion__menu {
+  margin: 1rem;
+}
+
+.accordion-heading {
+  text-align: center;
+  color: white;
+}
+
+.accordion__content--open .accordion__title::after { 
+  content: "\2796";
+  color: white;
+}
+
+.accordion__content--open .accordion__body { 
+  display: block;
+}
+
+.accordion__content--open button  {
+  background-color: #6f9ead85;
+}
+
+.accordion__title { 
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 1rem;
+  padding-right: 3rem;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #052e72;
+  font: inherit;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  min-width: 20rem;
+}
+
+.accordion__title::after { 
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 1ch);
+  color: white;
+}
+
+.accordion__title::after { 
+  content: "\2795";
+  color: white;
+}
+
+.content-accordion {
+  grid-area: content;
+  padding: 1rem;
+  background: white;
+  text-align: left;
+  width: 20rem;
+}
+
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/****************************************** 
+These styles are for Buttons
+******************************************/
+
+.signup-btn {
+  color: white;
+  font-size: medium;
+  margin: 1rem;
+  padding: 0.3rem;
+  background-color: navy;
+}
+
+.guest-login {
+  text-decoration: underline;
+  color: white;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+}
+
+.signup{
+  color: white;
+  text-align: center;
+  font-size: medium;
+  font-family: inherit;
+  margin: 7% 1% 0 1%;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.greet-user {
+  color: white;
+  margin: 0;
+}
+
+/****************************************** 
+These styles are for Loader
+******************************************/
+
+.loader {
+  border: 0.5rem solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 0.5rem solid #3498db;
+  width: 5rem;
+  height: 5rem;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/****************************************** 
+These styles are for Logged in User Details
+******************************************/
+
+.profile-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1%;
+  flex-direction: column;
+}
+
+/****************************************** 
+These styles are for Privacy Modal 
+******************************************/
+
+.modal-css {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #8da6e8;
+  color: black;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid black;
+  height: 83vh;
+  width: 43vh;
+}
+
+.modal-header {
+  padding: 0.2rem;
+  top: 0;
+  position: absolute;
+}
+
+.modal-footer {
+  bottom: 0;
+  position: absolute;
+  padding: 0.2rem;
+}
+
+.modal-body {
+  padding: 1rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 71vh;
+  overflow-y: auto;
+}
+
+.privacy-policy {
+  background: none;
+  color: white;
+  text-decoration: underline;
+  margin: 0.5rem;
+  padding: 0.1rem;
+  border: none;
+}
+
+
+/****************************************** 
+These styles are for Menu Bar 
+******************************************/
+
+.menu-bar {
+  background-color: black;
+  box-shadow: 0 10px 27px rgb(0 0 0 / 5%);
+  flex-direction: column;
+  left: -100%;
+  position: absolute;
+  text-align: center;
+  top: 3rem;
+  transition: 0.3s;
+  width: 100%;
+  z-index: 1;
+}
+
+.menu-bar.active {
+  left: 0%;
+}
+
+.menu-bar li {
+  margin: 0.5rem 0;
+}
+
+.menu-bar li a {
+  color: white;
+  font-size: medium;
+}
+
+/****************************************** 
+These styles are for form 
+******************************************/
+
+form {
+  color: white;
+  font-size: medium;
+}
+
+.label-input label {
+  display: block;
+  font-size: medium;
+}
+
+.label-input input {
+  width: 61%;
+  height: 4vh;
+}
+
+.label-input {
+  padding: 0.5rem;
+}
+
+.p-required {
+  color: #ff3636;
+  font-size: large;
+}
+
+.required:after {
+  content: '*';
+  color: #ff0000c4;
+  font-size: large;
+}
+
+input, select  {
+  border: 1px solid #80a0c1;
+  color: #2f2b2b;
+  margin: 0.2rem;
+  padding: 1%;
+}
+
+.button-style {
+  background-color: #1149cacf;
+  color: white;
+  font-size: medium;
+  margin: 1rem;
+  padding: 0.3rem;
+}
+
+:disabled {
+  background: grey;
+}
+
+/******************************************
+These are styles for Elements 
+******************************************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: azure;
+  font-size: 14px;
+  letter-spacing: 0.2vh;
+  margin: 0;
+  position: relative;
+}
+
+li {
+  margin: 0;
+  padding: 0.4rem;
+}
+
+main {
+  grid-area: content;
+}
+
+footer {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  font-size: small;
+  font-family: inherit;
+  font-weight: 500;
+  grid-area: footer;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  flex-direction: column;
+}
+
+footer a {
+  text-decoration-line: underline;
+  color: white;
+  padding: 0.2rem;
+}
+
+footer p {
+  padding: 0.2rem;
+}
+
+/****************************************** 
+These styles are for animation
+******************************************/
+
+@media (prefers-reduced-motion : no-preference) {
+
+  main {
+      animation-name: fadeIn, moveLeft300px, bounce;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+  }
+  
+  @keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
+    }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
+
+/****************************************** 
+These styles are for Mobile
+******************************************/
+
+@media only screen and (min-width : 800px) {
+
+  .split {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border: 3px solid black;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .left {
+    width: 40%;
+    left: 0;
+    background-image: url('./img/DW_Text.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: contrast(0.3);
+  }
+  
+  .right {
+    right: 0;
+    background-color: transparent;
+    width: 60%;
+  }
+
+  .d-logo {
+    display: none;
+  }
+
+  .signup {
+    margin: 0% 1% 0 1%;
+  }
+
+  .header{
+    background-color: black;
+    display: grid;
+    grid-template-areas: "logo header header" "content content content" "footer footer footer";
+    grid-template-columns: auto 1fr;
+    grid-area: header;
+  }
+  
+  .header .logo {
+    width: 4rem;
+  }
+
+  .menu-bar {
+    left: 0;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+  }
+
+  .menu-bar > li {
+    padding: 1rem 0;
+    position: relative;
+  }
+  
+  .menu-bar li a {
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  li {
+    margin: 0;
+    padding: 0.4rem;
+  }
+
+  .content { 
+    padding: 2rem;
+    opacity: 0.94;
+    font-weight: 800;
+    font-size: medium;
+  }
+
+  .content-accordion {
+    width: 80vh;
+  }
+  
+  .accordion__menu {
+    margin: 2rem;
+  }
+
+  .accordion__title {
+    width: 80vh;
+  }
+  
+  .profile-details {
+    flex-direction: row;
+  }
+
+  .modal-css {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #8da6e8;
+    color: black;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 83vh;
+    width: 100vh;
+  }
+  
+  .modal-header {
+    padding: 0.1rem;
+    top: 0;
+    position: absolute;
+  }
+  
+  .modal-footer {
+    bottom: 0;
+    position: absolute;
+    padding: 0.4rem;
+    font-size: medium;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  footer {
+    font-size: medium;
+  }
+
+  .privacy-policy {
+    font-size: medium;
+  }
+
+  .loader {
+    border: 0.5rem solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 0.5rem solid #3498db;
+    width: 5rem;
+    height: 5rem;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+}

@@ -1,0 +1,101 @@
+.carousel-main {
+  margin: 0;
+  padding: 0;
+  background-image: url('./img/Grey-Winter.jpeg');
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin: 3rem 0;
+  position: absolute;
+  align-items: center;
+}
+
+.carousel__control { 
+  min-width: 1rem;
+  border: none;
+  font-size: xx-large;
+  font-weight: 900;
+  color: white;
+  display: inline-block;
+  background: black;
+}
+
+.carousel__slide-container { 
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.gallery-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-text {
+  font-weight: 700;
+  background: black;
+  color: white;
+  margin: 1px auto;
+  padding: 14px;
+}
+
+.carousel__img { 
+  max-height: 43vh;
+  min-height: 43vh;
+  min-width: 32vh;
+  max-width: 63vh;
+  height: 83%;
+  width: 100%;
+}
+
+.carousel__slide { 
+  position: absolute;
+  visibility: hidden;
+}
+
+.carousel__slide--active { 
+  position: static;
+  visibility: visible;
+}
+
+@media only screen and (min-width : 800px) {
+
+  .carousel__img {
+    max-height: 64vh;
+    min-height: 64vh;
+    min-width: 44vh;
+    max-width: 100vh;
+    width: 100%;
+  }
+
+  .carousel__content {
+    margin: 3vh 1vh;
+  }
+
+  .gallery-buttons {
+    flex-direction: row;
+    width: 100vh;
+  }
+
+  .gallery-text{
+    margin: 0.5rem auto;
+    font-size: medium;
+  }
+
+}
+
